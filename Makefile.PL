@@ -11,7 +11,6 @@ WriteMakefile
                            'Test::More' => 0,
                            'TeamCity::BuildMessages' => 0,
                            'TAP::Formatter::Base' => '3.17',
-                           'File::Spec' => 0,
                            'TAP::Formatter::Session' => '3.17'
                          }
         )

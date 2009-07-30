@@ -1,8 +1,8 @@
 ##############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.01/xt/author/00_perlcriticrc $
-#     $Date: 2009-07-30 11:46:19 -0700 (Thu, 30 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/xt/author/00_perlcriticrc $
+#     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
 #   $Author: thaljef $
-# $Revision: 3450 $
+# $Revision: 3453 $
 ##############################################################################
 
 profile-strictness = fatal
@@ -23,16 +23,9 @@ strict = 1
 
 [-CodeLayout::RequireTidyCode]
 
-[Documentation::PodSpelling]
-stop_words_file = xt/author/40_stop_words
-
 [Documentation::RequirePodSections]
 lib_sections    = NAME|DESCRIPTION|AUTHOR|COPYRIGHT
 script_sections = NAME|DESCRIPTION|AUTHOR|COPYRIGHT
-
-# Wrapping Exception constructor calls across lines runs into 9 lines too quickly.
-[InputOutput::RequireBriefOpen]
-lines = 20
 
 [InputOutput::RequireCheckedSyscalls]
 functions = open close

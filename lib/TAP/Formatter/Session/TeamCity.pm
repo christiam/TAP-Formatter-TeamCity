@@ -1,8 +1,8 @@
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.01/lib/TAP/Formatter/Session/TeamCity.pm $
-#     $Date: 2009-04-02 10:19:46 -0700 (Thu, 02 Apr 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/lib/TAP/Formatter/Session/TeamCity.pm $
+#     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
 #   $Author: thaljef $
-# $Revision: 3273 $
+# $Revision: 3453 $
 #############################################################################
 
 package TAP::Formatter::Session::TeamCity;
@@ -16,7 +16,7 @@ use base qw(TAP::Formatter::Session);
 
 #-----------------------------------------------------------------------------
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 #----------------------------------------------------------------------------
 1;

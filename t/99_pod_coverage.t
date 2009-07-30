@@ -1,7 +1,7 @@
 #!perl
 
 ##############################################################################
-#     $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.01/t/99_pod_coverage.t $
+#     $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/t/99_pod_coverage.t $
 #    $Date: 2009-07-30 11:46:19 -0700 (Thu, 30 Jul 2009) $
 #   $Author: thaljef $
 # $Revision: 3450 $

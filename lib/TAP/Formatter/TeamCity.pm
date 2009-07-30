@@ -1,8 +1,8 @@
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.01/lib/TAP/Formatter/TeamCity.pm $
-#     $Date: 2009-07-30 11:54:11 -0700 (Thu, 30 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/lib/TAP/Formatter/TeamCity.pm $
+#     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
 #   $Author: thaljef $
-# $Revision: 3451 $
+# $Revision: 3453 $
 #############################################################################
 
 package TAP::Formatter::TeamCity;
@@ -19,7 +19,7 @@ use base qw(TAP::Formatter::Base);
 
 #-----------------------------------------------------------------------------
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 #-----------------------------------------------------------------------------
 
@@ -137,7 +137,7 @@ your F<Build.PL> file:
 
   # Specify this Formatter, if the environment variable is set:
   $builder->tap_harness_args( {formatter_class => 'TAP::Formatter::TeamCity'} )
-    if $ENV{RUNNING_UNDER_TEAMCITY} && require TAP::Formatter::TeamCity;
+    if $ENV{RUNNING_UNDER_TEAMCITY} && eval {require TAP::Formatter::TeamCity};
 
   # Generate build script as ususal:
   $builder->create_build_script();

@@ -41,7 +41,7 @@ SUGGESTED USAGE
 
       # Specify this Formatter, if the environment variable is set:
       $builder->tap_harness_args( {formatter_class => 'TAP::Formatter::TeamCity'} )
-        if $ENV{RUNNING_UNDER_TEAMCITY} && require TAP::Formatter::TeamCity;
+        if $ENV{RUNNING_UNDER_TEAMCITY} && eval {require TAP::Formatter::TeamCity};
 
       # Generate build script as ususal:
       $builder->create_build_script();
