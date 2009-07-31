@@ -1,8 +1,8 @@
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/lib/TAP/Formatter/TeamCity.pm $
-#     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/lib/TAP/Formatter/TeamCity.pm $
+#     $Date: 2009-07-31 00:21:03 -0700 (Fri, 31 Jul 2009) $
 #   $Author: thaljef $
-# $Revision: 3453 $
+# $Revision: 3457 $
 #############################################################################
 
 package TAP::Formatter::TeamCity;
@@ -19,7 +19,7 @@ use base qw(TAP::Formatter::Base);
 
 #-----------------------------------------------------------------------------
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 #-----------------------------------------------------------------------------
 
@@ -93,7 +93,7 @@ sub _emit_teamcity_test_results {
 
 =head1 NAME
 
-TAP::Formatter::TeamCity
+TAP::Formatter::TeamCity - Emit test results as TeamCity service messages
 
 =head1 SYNOPSIS
 

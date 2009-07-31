@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/t/00_compile.t $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/t/00_compile.t $
 #     $Date: 2009-07-30 11:46:19 -0700 (Thu, 30 Jul 2009) $
 #   $Author: thaljef $
 # $Revision: 3450 $

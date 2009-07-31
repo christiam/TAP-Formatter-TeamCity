@@ -1,8 +1,8 @@
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/lib/TAP/Formatter/Session/TeamCity.pm $
-#     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/lib/TAP/Formatter/Session/TeamCity.pm $
+#     $Date: 2009-07-31 00:21:03 -0700 (Fri, 31 Jul 2009) $
 #   $Author: thaljef $
-# $Revision: 3453 $
+# $Revision: 3457 $
 #############################################################################
 
 package TAP::Formatter::Session::TeamCity;
@@ -16,7 +16,7 @@ use base qw(TAP::Formatter::Session);
 
 #-----------------------------------------------------------------------------
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 #----------------------------------------------------------------------------
 1;
@@ -25,11 +25,11 @@ our $VERSION = '0.02';
 
 =head1 NAME
 
-TAP::Formatter::Session::TeamCity
+TAP::Formatter::Session::TeamCity - A session of TeamCity service messages
 
 =head1 DESCRIPTION
 
-L<TAP::Formatter::Session::TeamCity> is the Session delegate used by 
+L<TAP::Formatter::Session::TeamCity> is the Session delegate used by
 L<TAP::Formatter::TeamCity>.  Since TeamCity takes care of tabulating and
 summarizing test results for you, there is no particular session-level
 reporting that is required.  So this is basically just the minimal

@@ -1,9 +1,13 @@
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/Changes $
-#     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/Changes $
+#     $Date: 2009-07-31 00:21:03 -0700 (Fri, 31 Jul 2009) $
 #   $Author: thaljef $
-# $Revision: 3453 $
+# $Revision: 3457 $
 #############################################################################
+
+[0.03]  Released 2009-07-30
+
+     Added descriptions to the NAME sections in POD.
 
 [0.02]  Released 2009-07-30
 

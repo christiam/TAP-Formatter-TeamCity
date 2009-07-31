@@ -1,7 +1,7 @@
 #!perl
 
 ##############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.02/Build.PL $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/Build.PL $
 #     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
 #   $Author: thaljef $
 # $Revision: 3453 $

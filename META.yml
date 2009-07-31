@@ -1,6 +1,6 @@
 ---
 name: TAP-Formatter-TeamCity
-version: 0.02
+version: 0.03
 author:
   - 'Jeffrey Thalhammer <thaljef@cpan.org>'
 abstract: Emit test results as TeamCity service messages.
@@ -16,10 +16,10 @@ build_requires:
 provides:
   TAP::Formatter::Session::TeamCity:
     file: lib/TAP/Formatter/Session/TeamCity.pm
-    version: 0.02
+    version: 0.03
   TAP::Formatter::TeamCity:
     file: lib/TAP/Formatter/TeamCity.pm
-    version: 0.02
+    version: 0.03
 generated_by: Module::Build version 0.33
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html

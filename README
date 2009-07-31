@@ -1,5 +1,6 @@
 NAME
-    TAP::Formatter::TeamCity
+    TAP::Formatter::TeamCity - Emit test results as TeamCity service
+    messages
 
 SYNOPSIS
        # When using prove(1):
