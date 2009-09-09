@@ -3,10 +3,10 @@
 <!--
 
 ##############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/build.xml $
-#     $Date: 2009-07-30 11:46:19 -0700 (Thu, 30 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.04/build.xml $
+#     $Date: 2009-09-09 13:03:47 -0700 (Wed, 09 Sep 2009) $
 #   $Author: thaljef $
-# $Revision: 3450 $
+# $Revision: 3641 $
 ##############################################################################
 
 The following is an Ant build script for building Perl distributions
@@ -172,8 +172,9 @@ Enjoy!!
 
 <!--
 
+Written by Jeffrey Ryan Thalhammer.
 
-Copyright (c) 2009 Jeffrey Ryan Thalhammer.  All rights reserved.
+Copyright (c) 2009 Imaginative Software Systems.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.  The full text of this license

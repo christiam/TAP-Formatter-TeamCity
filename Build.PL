@@ -1,10 +1,10 @@
 #!perl
 
 ##############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/Build.PL $
-#     $Date: 2009-07-30 13:54:49 -0700 (Thu, 30 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.04/Build.PL $
+#     $Date: 2009-09-09 13:03:47 -0700 (Wed, 09 Sep 2009) $
 #   $Author: thaljef $
-# $Revision: 3453 $
+# $Revision: 3641 $
 ##############################################################################
 
 
@@ -16,7 +16,7 @@ use Module::Build;
 
 my $builder = Module::Build->new(
     module_name         => 'TAP::Formatter::TeamCity',
-    dist_author         => 'Jeffrey Thalhammer <thaljef@cpan.org>',
+    dist_author         => 'Jeffrey Ryan Thalhammer <jeff@imaginative-software.com>',
     dist_abstract       => 'Emit test results as TeamCity service messages.',
     license             => 'perl',
     requires            => {

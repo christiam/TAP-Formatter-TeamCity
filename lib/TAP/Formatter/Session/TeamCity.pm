@@ -1,8 +1,8 @@
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/lib/TAP/Formatter/Session/TeamCity.pm $
-#     $Date: 2009-07-31 00:21:03 -0700 (Fri, 31 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.04/lib/TAP/Formatter/Session/TeamCity.pm $
+#     $Date: 2009-09-09 13:03:47 -0700 (Wed, 09 Sep 2009) $
 #   $Author: thaljef $
-# $Revision: 3457 $
+# $Revision: 3641 $
 #############################################################################
 
 package TAP::Formatter::Session::TeamCity;
@@ -16,7 +16,7 @@ use base qw(TAP::Formatter::Session);
 
 #-----------------------------------------------------------------------------
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 #----------------------------------------------------------------------------
 1;
@@ -37,11 +37,11 @@ L<TAP::Formatter::Session>.
 
 =head1 AUTHOR
 
-Jeffrey Thalhammer <thaljef@cpan.org>
+Jeffrey Ryan Thalhammer <jeff@imaginative-sofrware.com>
 
 =head1 COPYRIGHT   
 
-Copyright (c) 2009 Jeffrey Ryan Thalhammer.  All rights reserved.
+Copyright (c) 2009 Imaginative Software Systems.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.  The full text of this license

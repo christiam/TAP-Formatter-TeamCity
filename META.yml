@@ -1,26 +1,28 @@
 ---
 name: TAP-Formatter-TeamCity
-version: 0.03
+version: 0.04
 author:
-  - 'Jeffrey Thalhammer <thaljef@cpan.org>'
+  - 'Jeffrey Ryan Thalhammer <jeff@imaginative-software.com>'
 abstract: Emit test results as TeamCity service messages.
 license: perl
 resources:
   license: http://dev.perl.org/licenses/
+build_requires:
+  Test::More: 0
 requires:
   TAP::Formatter::Base: 3.17
   TAP::Formatter::Session: 3.17
   TeamCity::BuildMessages: 0
-build_requires:
-  Test::More: 0
+configure_requires:
+  Module::Build: 0.35
 provides:
   TAP::Formatter::Session::TeamCity:
     file: lib/TAP/Formatter/Session/TeamCity.pm
-    version: 0.03
+    version: 0.04
   TAP::Formatter::TeamCity:
     file: lib/TAP/Formatter/TeamCity.pm
-    version: 0.03
-generated_by: Module::Build version 0.33
+    version: 0.04
+generated_by: Module::Build version 0.35
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4

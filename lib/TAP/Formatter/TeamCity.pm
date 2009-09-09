@@ -1,8 +1,8 @@
 #############################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.03/lib/TAP/Formatter/TeamCity.pm $
-#     $Date: 2009-07-31 00:21:03 -0700 (Fri, 31 Jul 2009) $
+#      $URL: http://perlcritic.tigris.org/svn/perlcritic/tags/TAP-Formatter-TeamCity-0.04/lib/TAP/Formatter/TeamCity.pm $
+#     $Date: 2009-09-09 13:03:47 -0700 (Wed, 09 Sep 2009) $
 #   $Author: thaljef $
-# $Revision: 3457 $
+# $Revision: 3641 $
 #############################################################################
 
 package TAP::Formatter::TeamCity;
@@ -19,9 +19,11 @@ use base qw(TAP::Formatter::Base);
 
 #-----------------------------------------------------------------------------
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 #-----------------------------------------------------------------------------
+
+my $last_test_name;
 
 sub open_test {
     my ($self, $test, $parser) = @_;
@@ -38,11 +40,12 @@ sub open_test {
     teamcity_emit_build_message('testSuiteStarted', name => $test);
 
     while ( defined( my $result = $parser->next() ) ) {
+        print $result->comment(), ' ' if $result->is_comment();
         $self->_emit_teamcity_messages($result) if $result->is_test();
         $session->result($result);
-        exit 1 if $result->is_bailout();
     }
 
+    teamcity_emit_build_message('testFinished', name => $last_test_name) if $last_test_name;
     teamcity_emit_build_message('testSuiteFinished', name => $test);
 
     return $session;
@@ -53,12 +56,16 @@ sub open_test {
 sub _emit_teamcity_messages {
     my ($self, $result) = @_;
 
+    # First, close out the last test, if there was one...
+    teamcity_emit_build_message('testFinished', name => $last_test_name) if $last_test_name;
     my $test_name = $result->description() || 'No test name given';
     $test_name =~ s{\A \s* - \s+}{}mx;
 
+    # Now start this test and evaluate the results...
     teamcity_emit_build_message('testStarted', captureStandardOutput => 'true', name => $test_name);
     $self->_emit_teamcity_test_results($test_name, $result);
-    teamcity_emit_build_message('testFinished', name => $test_name);
+
+    $last_test_name = $test_name;
 
     return;
 }
@@ -66,21 +73,20 @@ sub _emit_teamcity_messages {
 #-----------------------------------------------------------------------------
 
 sub _emit_teamcity_test_results {
-    my ($self, $test_name, $result) = @_;
+    my ($self, $test_name, $test) = @_;
 
-    my $expl = $result->explanation() || 'No explanation given';
+    my $expl = $test->explanation();
+    my %message = $expl ? (message => $expl) : ();
+    my %args = (name => $test_name, %message);
 
-    if ( $result->has_todo() ) {
-        teamcity_emit_build_message('testIgnored', name => $test_name,  message => $expl);
+    if ( $test->has_todo() ) {
+        teamcity_emit_build_message('testIgnored', %args);
     }
-    elsif ( $result->has_skip() ) {
-        teamcity_emit_build_message('testIgnored', name => $test_name,  message => $expl);
+    elsif ( $test->has_skip() ) {
+        teamcity_emit_build_message('testIgnored', %args);
     }
-    elsif ( $result->is_unknown() ) {
-        teamcity_emit_build_message('testFailed', name => $test_name,  message => $expl);
-    }
-    elsif ( not $result->is_ok() ) {
-        teamcity_emit_build_message('testFailed', name => $test_name,  message => $expl);
+    elsif ( not $test->is_ok() ) {
+        teamcity_emit_build_message('testFailed', %args);
     }
 
     return;
@@ -175,11 +181,11 @@ L<TeamCity::BuildMessages>
 
 =head1 AUTHOR
 
-Jeffrey Thalhammer <thaljef@cpan.org>
+Jeffrey Ryan Thalhammer <jeff@imaginative-software.com>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2009 Jeffrey Ryan Thalhammer.  All rights reserved.
+Copyright (c) 2009 Imaginative Software Systems.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.  The full text of this license

@@ -77,10 +77,10 @@ SEE ALSO
     TeamCity::BuildMessages
 
 AUTHOR
-    Jeffrey Thalhammer <thaljef@cpan.org>
+    Jeffrey Ryan Thalhammer <jeff@imaginative-software.com>
 
 COPYRIGHT
-    Copyright (c) 2009 Jeffrey Ryan Thalhammer. All rights reserved.
+    Copyright (c) 2009 Imaginative Software Systems. All rights reserved.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself. The full text of this license can
