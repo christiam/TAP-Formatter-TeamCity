@@ -104,7 +104,7 @@ TAP::Formatter::TeamCity - Emit test results as TeamCity service messages
 =head1 SYNOPSIS
 
    # When using prove(1):
-   prove -formatter TAP::Formatter::TeamCity my_test.t
+   prove --formatter TAP::Formatter::TeamCity my_test.t
 
    # From within a Module::Build subclass:
    sub tap_harness_args { return {formatter_class => 'TAP::Formatter::TeamCity'} }
